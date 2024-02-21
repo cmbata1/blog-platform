@@ -1,14 +1,15 @@
 <template>
-  <div>Hello {{ value }}</div>
+  <div id="app">
+    <NavBar />
+  </div>
 </template>
 
 <script>
+import NavBar from "@/components/NavBar";
 export default {
   name: "App",
-  data() {
-    return {
-      value: "World"
-    };
+  components: {
+    NavBar
   }
 };
 </script>
