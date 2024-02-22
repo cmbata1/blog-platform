@@ -11,16 +11,17 @@
   "dependencies": {
     "buefy": "^0.9.28",
     "core-js": "^3.6.4",
-    "vue": "^3.4.19"
+    "vue": "^3.4.19",
+    "vue-loader": "^17.3.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
+    "@vue/compiler-sfc": "^3.4.19",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "vue-template-compiler": "^2.7.16"
+    "eslint-plugin-vue": "^6.1.2"
   },
   "eslintConfig": {
     "root": true,
