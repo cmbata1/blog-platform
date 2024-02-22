@@ -4,9 +4,9 @@
             <b-navbar-item href="#">
                 About
             </b-navbar-item>
-            <h2 tag="router-link" :to="{ path: '/' }" style="font-family: Monaco, fantasy;">
+            <h1 tag="router-link" :to="{ path: '/' }" style="font-family: Monaco, fantasy; vertical-align: bottom;">
                 Chronicles
-            </h2>
+            </h1>
             <b-navbar-item href="#">
                 Blogs
             </b-navbar-item>
