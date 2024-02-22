@@ -11,7 +11,7 @@
   "dependencies": {
     "buefy": "^0.9.28",
     "core-js": "^3.6.4",
-    "vue": "^3.4.19",
+    "vue": "^2.7.16",
     "vue-loader": "^17.3.1"
   },
   "devDependencies": {
