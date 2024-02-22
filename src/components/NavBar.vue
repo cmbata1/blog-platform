@@ -4,9 +4,10 @@
             <b-navbar-item href="#">
                 About
             </b-navbar-item>
-            <h1 tag="router-link" :to="{ path: '/' }" style="font-family: Monaco, fantasy; vertical-align: bottom;">
+            <h3 $title-color= "info" class="title is-3 is-vcentered" tag="router-link" :to="{ path: '/' }" 
+            style="font-family: Monaco, fantasy;">
                 Chronicles
-            </h1>
+            </h3>
             <b-navbar-item href="#">
                 Blogs
             </b-navbar-item>
