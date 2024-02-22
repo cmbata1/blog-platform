@@ -4,7 +4,7 @@
             <b-navbar-item href="#">
                 About
             </b-navbar-item>
-            <h3 $title-color= "info" class="title is-3 is-vcentered" tag="router-link" :to="{ path: '/' }" 
+            <h3 title-color= "info" class="title is-3 is-vcentered" tag="router-link" :to="{ path: '/' }" 
             style="font-family: Monaco, fantasy;">
                 Chronicles
             </h3>
