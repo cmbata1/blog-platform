@@ -1,5 +1,11 @@
+<style>
+.hero.is-lightblue {
+  background-color: #d2eeea;
+  color: rgba(0, 0 ,0, .7 )
+}
+</style>
 <template>
-  <div id="app" class="has-background-info-light">
+  <div class="hero is-fullheight is-lightblue" id="app">
     <NavBar />
   </div>
 </template>
