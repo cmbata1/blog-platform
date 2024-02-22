@@ -4,17 +4,14 @@
             <b-navbar-item href="#">
                 About
             </b-navbar-item>
-            <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                <h2 style="font-family: Monaco, fantasy;">
-                    Chronicles
-                </h2>
-            </b-navbar-item>
+            <h2 tag="router-link" :to="{ path: '/' }" style="font-family: Monaco, fantasy;">
+                Chronicles
+            </h2>
             <b-navbar-item href="#">
                 Blogs
             </b-navbar-item>
         </template>
     </b-navbar>
-    <hr>
 </template>
   
   <script>
