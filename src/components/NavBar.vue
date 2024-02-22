@@ -5,17 +5,16 @@
                 About
             </b-navbar-item>
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                <img
-                    src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-                    alt="Lightweight UI components for Vue.js based on Bulma"
-                >
+                <h2 style="font-family: Monaco, fantasy;">
+                    Chronicles
+                </h2>
             </b-navbar-item>
             <b-navbar-item href="#">
                 Blogs
             </b-navbar-item>
-            <hr>
         </template>
     </b-navbar>
+    <hr>
 </template>
   
   <script>
