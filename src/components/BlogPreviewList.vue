@@ -1,9 +1,10 @@
 <template>
     <div>
         <BlogCard 
-          v-for="(blogTitle, index) in blogTitles"
+          v-for="(blogTitle, index) in blogTitles" :key="blogTitle"
           :blogTitle="blogTitle"
-          :blogContent="blogContents[index]"/>
+          :blogContent="blogContents[index]"
+          />
     </div>
 </template>
 
