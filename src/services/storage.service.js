@@ -1,7 +1,7 @@
 const BlobService = {
     getBlobList(){
         const { BlobServiceClient } = require("@azure/storage-blob");
-        const account = process.env.ACCOUNT_NAME;
+        const account = ${{ env.ACCOUNT_NAME }};
         const sas = process.env.SAS;
         const blobServiceClient = new BlobServiceClient(`https://${account}.blob.core.windows.net${sas}`);
 
