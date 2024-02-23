@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/NavBar.vue";
 import BlogPreviewList from "./components/BlogPreviewList.vue";
 export default {
   name: "App",

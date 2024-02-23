@@ -9,7 +9,7 @@ import Vue from 'vue'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import BlogCard from './BlogCard';
-import getBlobList from './services/storage.service';
+import BlobService from '../services/storage.service.js';
 
 Vue.use(Buefy)
 export default {
@@ -24,7 +24,7 @@ export default {
         };
     },
     created(){
-        this.blogTitle, this.blogContent = getBlobList();
+        this.blogTitle, this.blogContent = BlobService.getBlobList();
     }
 };
 </script>
