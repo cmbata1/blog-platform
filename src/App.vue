@@ -12,10 +12,12 @@
 
 <script>
 import NavBar from "@/components/NavBar";
+import BlogPreviewList from "./components/BlogPreviewList.vue";
 export default {
   name: "App",
   components: {
-    NavBar
+    NavBar,
+    BlogPreviewList
   }
 };
 </script>
