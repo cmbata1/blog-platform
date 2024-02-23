@@ -11,6 +11,7 @@
   </div>
 </template>
 
+<script src="bundle.js"></script>
 <script>
 import NavBar from "@/components/NavBar.vue";
 import BlogPreviewList from "@/components/BlogPreviewList.vue";
