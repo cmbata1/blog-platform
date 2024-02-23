@@ -1,15 +1,11 @@
-import { SecretClient } from "@azure/keyvault-secrets";
-
 const BlobService = {
     getBlobList(){
-        const { DefaultAzureCredential } = require("@azure/identity");
         const { BlobServiceClient } = require("@azure/storage-blob");
-        const { SecretClient } = require("@azure/keyvault-secrets");
-        const account = "<account name>";
-        const sas = "<service Shared Access Signature Token>";
+        const account = process.ENV.ACCOUNT_NAME;
+        const sas = process.ENV.SAS;
         const blobServiceClient = new BlobServiceClient(`https://${account}.blob.core.windows.net${sas}`);
 
-        const containerName = "";
+        const containerName = process.ENV.CONTAINER_NAME;
         async function main() {
         const containerClient = blobServiceClient.getContainerClient(containerName);
 

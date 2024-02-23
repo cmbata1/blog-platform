@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@azure/identity": "^4.0.1",
     "@azure/keyvault-secrets": "^4.8.0",
     "@azure/storage-blob": "^12.17.0",
     "buefy": "^0.9.28",
