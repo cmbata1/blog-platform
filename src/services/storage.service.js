@@ -1,11 +1,11 @@
 const BlobService = {
     getBlobList(){
         const { BlobServiceClient } = require("@azure/storage-blob");
-        const account = process.ENV.ACCOUNT_NAME;
-        const sas = process.ENV.SAS;
+        const account = process.env.ACCOUNT_NAME;
+        const sas = process.env.SAS;
         const blobServiceClient = new BlobServiceClient(`https://${account}.blob.core.windows.net${sas}`);
 
-        const containerName = process.ENV.CONTAINER_NAME;
+        const containerName = process.env.CONTAINER_NAME;
         async function main() {
         const containerClient = blobServiceClient.getContainerClient(containerName);
 
