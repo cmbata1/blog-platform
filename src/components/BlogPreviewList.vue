@@ -1,6 +1,9 @@
 <template>
     <div>
-        <BlogCard v-for="(blog, index) in blogs"></BlogCard>
+        <BlogCard 
+          v-for="(blogTitle, index) in blogTitles"
+          :blogTitle="blogTitle"
+          :blogContent="blogContents[index]"/>
     </div>
 </template>
 
@@ -19,12 +22,12 @@ export default {
     },
     data() {
         return {
-            blogTitle: [],
-            blogContent: []
+            blogTitles: [],
+            blogContents: []
         };
     },
     created(){
-        this.blogTitle, this.blogContent = BlobService.getBlobList();
+        this.blogTitles, this.blogContents = BlobService.getBlobList();
     }
 };
 </script>
