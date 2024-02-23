@@ -7,17 +7,18 @@
 <template>
   <div class="hero is-fullheight is-lightblue" id="app">
     <NavBar />
+    <BlogPreviewList />
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import BlogPreviewList from "./components/BlogPreviewList.vue";
+import BlogPreviewList from "@/components/BlogPreviewList.vue";
 export default {
   name: "App",
   components: {
     NavBar,
-    BlogPreviewList
-  }
+    BlogPreviewList,
+}
 };
 </script>
