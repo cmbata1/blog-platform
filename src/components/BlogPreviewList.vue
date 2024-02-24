@@ -34,8 +34,10 @@ export default {
     async created(){
         const endpoint = '/api/Blog';
         const response = await fetch(endpoint);
+        console.log(response);
         const blogs = await response.json();
         this.blogs = blogs;
+        console.log(blogs)
     }
 };
 </script>
