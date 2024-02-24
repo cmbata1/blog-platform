@@ -3,9 +3,9 @@
         <div class="column is-one-quarter">
             <div v-for="blog in blogs" :key=blog>
                 <BlogCard 
-                blogTitle="blog.Title"
-                date="blog.date"
-                blogPreview="blog.Preview"
+                blogTitle={{blog.Title}}
+                date={{blog.date}}
+                blogPreview={{blog.Preview}}
                 />           
             </div>
 
@@ -31,13 +31,13 @@ export default {
             blogs: null
         }
     },
-    async created(){
+    async mounted(){
         const endpoint = '/data-api/rest/Blog';
         const response = await fetch(endpoint);
         console.log(response);
         const blogs = await response.json();
-        this.blogs = blogs;
-        console.log(blogs)
+        this.blogs = blogs.value;
+        console.log(this.blogs)
     }
 };
 </script>
