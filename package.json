@@ -12,9 +12,11 @@
     "@azure/identity": "^4.0.1",
     "@azure/keyvault-secrets": "^4.8.0",
     "@azure/storage-blob": "^12.17.0",
-    "browserify": "^17.0.0",
+    "brfs": "^2.0.2",
+    "browserify-shim": "^3.8.16",
     "buefy": "^0.9.28",
     "core-js": "^3.6.4",
+    "save": "^2.9.0",
     "vue": "^2.7.16",
     "vue-loader": "^17.3.1"
   },
