@@ -6,7 +6,7 @@
 </style>
 <template>
   <div class="hero is-fullheight is-lightblue" id="app">
-    <div class="hero body">
+    <div class="hero body" style="margin-bottom: 25px;">
       <NavBar />
       <BlogPreviewList />
     </div>

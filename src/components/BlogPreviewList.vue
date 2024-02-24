@@ -6,6 +6,18 @@
             blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
             />
         </div>
+        <div class="column is-one-quarter">
+            <BlogCard 
+            blogTitle="Sending Thoughts Out Into the World"
+            blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
+            />
+        </div>
+        <div class="column is-one-quarter">
+            <BlogCard 
+            blogTitle="Sending Thoughts Out Into the World"
+            blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
+            />
+        </div>
     </div>
 </template>
 
