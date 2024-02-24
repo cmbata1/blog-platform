@@ -28,7 +28,7 @@ export default {
     },
     data (){
         return {
-            blogs: []
+            blogs: null
         }
     },
     async created(){
