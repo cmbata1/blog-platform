@@ -1,9 +1,11 @@
 <template>
-    <div>
-        <BlogCard 
-          blogTitle="February 23rd 2023"
-          blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
-          />
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <BlogCard 
+            blogTitle="February 23rd 2023"
+            blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
+            />
+        </div>
     </div>
 </template>
 

@@ -7,8 +7,6 @@
 <template>
   <div class="hero is-fullheight is-lightblue" id="app">
     <NavBar />
-  </div>
-  <div>
     <BlogPreviewList />
   </div>
 </template>
