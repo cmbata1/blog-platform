@@ -1,14 +1,13 @@
 <template>
     <div class="columns is-centered">
-        <div class="column is-one-quarter">
-            <div v-for="blog in blogs" :key=blog>
+        <div v-for="blog in blogs" :key=blog>
+            <div class="column is-one-quarter">
                 <BlogCard 
                 blogTitle={{blog.Title}}
                 date={{blog.date}}
                 blogPreview={{blog.Preview}}
                 />           
-            </div>
-
+        </div>
         </div>
     </div>
 </template>
@@ -31,7 +30,7 @@ export default {
             blogs: null
         }
     },
-    async mounted(){
+    async created(){
         const endpoint = '/data-api/rest/Blog';
         const response = await fetch(endpoint);
         console.log(response);
