@@ -2,6 +2,7 @@
     <div class="card">
         <div class="card-content">
         <p class="title" v-text="blogTitle" />
+        <p class="subtitle is-5" v-text="date"/>
         <p class="subtitle is-6" v-text="blogContent"/>
         </div>
         <footer class="card-footer">
@@ -27,6 +28,9 @@ export default {
             type: String, required: true
         },
         blogContent:{
+            type: String, required: true
+        },
+        date:{
             type: String, required: true
         }
     }
