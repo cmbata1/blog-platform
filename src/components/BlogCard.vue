@@ -7,7 +7,7 @@
         <footer class="card-footer">
         <p class="card-footer-item">
             <span>
-            <span href="#" class="icon"><i class="fas fa-arrow-right"></i></span>
+            <a style="align-content: end;" href="#">View Post</a>
             </span>
         </p>
         </footer>
