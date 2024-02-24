@@ -1,11 +1,14 @@
 <template>
     <div class="columns is-centered">
-        <div v-for="blog in blogs" class="column is-one-quarter">
-            <BlogCard 
-            blogTitle={{ blog.Title }}
-            date={{blog.date}}
-            blogPreview={{blog.Preview}}
-            />
+        <div class="column is-one-quarter">
+            <div v-for="blog in blogs" :key=blog>
+                <BlogCard 
+                blogTitle: {{ blog.Title }}
+                date: {{blog.date}}
+                blogPreview: {{blog.Preview}}
+                />           
+            </div>
+
         </div>
     </div>
 </template>
