@@ -1,8 +1,8 @@
 <template>
     <div class="columns is-centered">
-        <div class="column is-one-third">
+        <div class="column is-one-quarter">
             <BlogCard 
-            blogTitle="February 23rd 2023"
+            blogTitle="Sending Thoughts Out Into the World"
             blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
             />
         </div>

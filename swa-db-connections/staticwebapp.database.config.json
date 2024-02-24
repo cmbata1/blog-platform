@@ -1,9 +1,11 @@
 {
   "$schema": "https://github.com/Azure/data-api-builder/releases/download/v0.9.7/dab.draft.schema.json",
   "data-source": {
-    "database-type": "mysql",
-    "connection-string": "",
-    "options": {}
+    "database-type": "mssql",
+    "connection-string": "@env('MYSQL')",
+    "options": {
+      "set-session-context": false 
+    }
   },
   "runtime": {
     "rest": {
@@ -18,7 +20,7 @@
     },
     "host": {
       "cors": {
-        "origins": [],
+        "origins": ["http://localhost:4280"],
         "allow-credentials": false
       },
       "authentication": {
@@ -29,7 +31,7 @@
   },
   "entities": {
     "Blog": {
-      "source": "Blogs",
+      "source": "dbo.Blogs",
       "permissions": [
         {
           "role": "anonymous",

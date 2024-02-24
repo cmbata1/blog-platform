@@ -2,12 +2,12 @@
     <div class="card">
         <div class="card-content">
         <p class="title" v-text="blogTitle" />
-        <p class="subtitle" v-text="blogContent"/>
+        <p class="subtitle is-6" v-text="blogContent"/>
         </div>
         <footer class="card-footer">
         <p class="card-footer-item">
             <span>
-            <a href="#" class="icon"><i class="fas fa-arrow-right"></i></a>
+            <span href="#" class="icon"><i class="fas fa-arrow-right"></i></span>
             </span>
         </p>
         </footer>
