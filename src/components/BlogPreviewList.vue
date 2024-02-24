@@ -13,11 +13,12 @@
 </template>
 
 <script>
-import {ref, Vue} from 'vue'
+import Vue from 'vue'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import BlogCard from './BlogCard';
 import fetch from 'node-fetch'
+import reactive from 'vue'
 
 Vue.use(Buefy)
 export default {
@@ -27,7 +28,7 @@ export default {
     },
     data (){
         return {
-            blogs: null
+            blogs: reactive(null)
         }
     },
     async created(){
@@ -35,7 +36,6 @@ export default {
         const response = await fetch(endpoint);
         console.log(response);
         const blogs = await response.json();
-        this.blogs = ref(blogs.value);
         console.log(this.blogs)
     }
 };
