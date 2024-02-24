@@ -27,5 +27,17 @@
       "mode": "production"
     }
   },
-  "entities": {}
+  "entities": {
+    "Blog": {
+      "source": "Blogs",
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            "read"
+          ]
+        }
+      ]
+    }
+  }
 }

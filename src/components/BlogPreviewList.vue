@@ -1,6 +1,6 @@
 <template>
     <div class="columns is-centered">
-        <div class="column is-half">
+        <div class="column is-one-third">
             <BlogCard 
             blogTitle="February 23rd 2023"
             blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
