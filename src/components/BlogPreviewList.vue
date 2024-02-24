@@ -32,7 +32,7 @@ export default {
         }
     },
     async created(){
-        const endpoint = '/api/Blog';
+        const endpoint = '/data-api/rest/Blog';
         const response = await fetch(endpoint);
         console.log(response);
         const blogs = await response.json();
