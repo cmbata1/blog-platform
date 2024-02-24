@@ -27,11 +27,11 @@ export default {
         blogTitle:{
             type: String, required: true
         },
-        blogContent:{
+        blogPreview:{
             type: String, required: true
         },
         date:{
-            type: String, required: true
+            type: Date, required: true
         }
     }
 };

@@ -1,24 +1,10 @@
 <template>
     <div class="columns is-centered">
-        <div class="column is-one-quarter">
+        <div v-for="blog in blogs" class="column is-one-quarter">
             <BlogCard 
-            blogTitle="Sending Thoughts Out Into the World"
-            date="February 23rd, 2024"
-            blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
-            />
-        </div>
-        <div class="column is-one-quarter">
-            <BlogCard 
-            blogTitle="Sending Thoughts Out Into the World"
-            date="February 23rd, 2024"
-            blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
-            />
-        </div>
-        <div class="column is-one-quarter">
-            <BlogCard 
-            blogTitle="Sending Thoughts Out Into the World"
-            date="February 23rd, 2024"
-            blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
+            blogTitle={{ blog.Title }}
+            date={{blog.date}}
+            blogPreview={{blog.Preview}}
             />
         </div>
     </div>
@@ -29,12 +15,24 @@ import Vue from 'vue'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import BlogCard from './BlogCard';
+import fetch from 'node-fetch'
 
 Vue.use(Buefy)
 export default {
     name: "BlogPreviewList",
     components: {
         BlogCard
+    },
+    data (){
+        return {
+            blogs: []
+        }
+    },
+    async created(){
+        const endpoint = '/api/Blog';
+        const response = await fetch(endpoint);
+        const blogs = await response.json();
+        this.blogs = blogs;
     }
 };
 </script>
