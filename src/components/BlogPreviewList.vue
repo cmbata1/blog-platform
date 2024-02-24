@@ -1,9 +1,8 @@
 <template>
     <div>
         <BlogCard 
-          v-for="(blogTitle, index) in blogTitles" :key="blogTitle"
-          :blogTitle="blogTitle"
-          :blogContent="blogContents[index]"
+          blogTitle="February 23rd 2023"
+          blogContent="A new challenge: a blog. Combining my thoughts with a new technical challenge"
           />
     </div>
 </template>
@@ -13,22 +12,12 @@ import Vue from 'vue'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import BlogCard from './BlogCard';
-import BlogService from '../services/blog.service.js';
 
 Vue.use(Buefy)
 export default {
     name: "BlogPreviewList",
     components: {
         BlogCard
-    },
-    data() {
-        return {
-            blogTitles: [],
-            blogContents: []
-        };
-    },
-    created(){
-        this.blogTitles, this.blogContents = BlogService.getBlogList();
     }
 };
 </script>

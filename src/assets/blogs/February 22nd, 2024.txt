@@ -1,1 +1,0 @@
-This is a test blog. I'm attempting to see if I can use the file name as the title for each blog, and then all contents of the text file go inside the post.

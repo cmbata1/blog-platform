@@ -24,10 +24,10 @@ export default {
     name: "BlogCard",
     props: {
         blogTitle:{
-            type: Object, required: true
+            type: String, required: true
         },
         blogContent:{
-            type: Object, required: true
+            type: String, required: true
         }
     }
 };
