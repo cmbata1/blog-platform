@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import {ref, Vue} from 'vue'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import BlogCard from './BlogCard';
