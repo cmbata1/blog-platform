@@ -6,8 +6,10 @@
 </style>
 <template>
   <div class="hero is-fullheight is-lightblue" id="app">
-    <NavBar />
-    <BlogPreviewList />
+    <div class="hero body">
+      <NavBar />
+      <BlogPreviewList />
+    </div>
   </div>
 </template>
 
