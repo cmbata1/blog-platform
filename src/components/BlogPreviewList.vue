@@ -5,9 +5,9 @@
             <div class="column is-one-fifth"></div>
                 <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.id>
                     <BlogCard 
-                    :blog-title="blog.Title"
+                    :blogTitle="blog.Title"
                     :date="blog.date"
-                    :blog-preview="blog.Preview"
+                    :blogPreview="blog.Preview"
                     />           
                 </div>
             <div class="column is-one-fifth"></div>
