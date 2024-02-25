@@ -8,7 +8,7 @@
 <script>
 import BlogPreviewList from "@/components/BlogPreviewList.vue";
 export default {
-  name: "App",
+  name: "Home",
   components: {
     BlogPreviewList,
 }

@@ -1,12 +1,14 @@
 <template>
     <div class="columns is-multiline">
-        <div class="column is-one-quarter is-offset-one-quarter" v-for="blog in blogs" :key=blog>
+        <div class="column is-one-fifth"></div>
+        <div class="column is-one-fifth" v-for="blog in blogs" :key=blog>
             <BlogCard 
             :blogTitle="blog.Title"
             :date="blog.date"
             :blogPreview="blog.Preview"
             />           
         </div>
+        <div class="column is-one-fifth"></div>
     </div>
 </template>
 
@@ -31,10 +33,8 @@ export default {
     async created(){
         const endpoint = '/data-api/rest/Blog';
         const response = await fetch(endpoint);
-        console.log(response);
         const blogs = await response.json();
-        this.blogs = blogs.value;
-        console.log(this.blogs)
+        this.blogs = blogs.value.slice(-3);
     }
 };
 </script>
