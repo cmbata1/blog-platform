@@ -1,5 +1,4 @@
 <template>
-    <h3 class="title is-3 is-vcentered has-text-black">Most Recent Posts</h3>
     <div class="columns is-multiline">
         <div class="column is-one-fifth"></div>
         <div class="column is-one-fifth" v-for="blog in blogs" :key=blog>
