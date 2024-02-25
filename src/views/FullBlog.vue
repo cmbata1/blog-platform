@@ -10,7 +10,7 @@
 import Vue from 'vue'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
-import Blog from './Blog';
+import Blog from "@/components/Blog.vue";
 
 Vue.use(Buefy)
 export default {
