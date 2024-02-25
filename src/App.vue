@@ -8,14 +8,12 @@
   <div class="hero is-fullheight is-lightblue" id="app">
     <div class="hero body" style="margin-bottom: 25px;">
       <NavBar />
-      <BlogPreviewList />
     </div>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import BlogPreviewList from "@/components/BlogPreviewList.vue";
 export default {
   name: "App",
   components: {

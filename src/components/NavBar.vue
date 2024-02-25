@@ -8,7 +8,7 @@
             style="font-family: 'Brush Script MT', cursive; padding: 50px 25px 25px 25px;">
                 Cat's Chronicles
             </h3>
-            <b-navbar-item href="/about">
+            <b-navbar-item href="/blogs">
                 Blogs
             </b-navbar-item>
         </template>

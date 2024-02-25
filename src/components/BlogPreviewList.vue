@@ -1,6 +1,6 @@
 <template>
-    <div class="columns is-multiline is-offset-one-quarter">
-        <div class="column is-one-quarter" v-for="blog in blogs" :key=blog>
+    <div class="columns is-multiline">
+        <div class="column is-one-quarter is-offset-one-quarter" v-for="blog in blogs" :key=blog>
             <BlogCard 
             :blogTitle="blog.Title"
             :date="blog.date"
