@@ -1,14 +1,14 @@
 <template>
     <div class="card">
         <div class="card-content">
-        <p class="title" v-text="blogTitle" />
+        <p class="title is-4" v-text="blogTitle" />
         <p class="subtitle is-5" v-text="date"/>
         <p class="subtitle is-6" v-text="blogPreview"/>
         </div>
         <footer class="card-footer">
         <p class="card-footer-item">
             <span>
-            <router-link to="{name: 'blog', params: {id: id}}">View Post</router-link>
+            <router-link to="{name: 'fullblog', params: {id: id}}">View Post</router-link>
             </span>
         </p>
         </footer>
