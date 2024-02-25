@@ -1,9 +1,9 @@
 <template>
     <div>
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
+        <p class="title" style="padding-left: 20%;">Latest Posts</p>
         <div class="columns is-multiline" v-if="!isLoading && blogs.length">
             <div class="column is-one-fifth"></div>
-            <p class="title">Latest Posts</p>
                 <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.id>
                     <BlogCard 
                     :blogTitle="blog.Title"

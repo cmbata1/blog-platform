@@ -8,7 +8,7 @@
         <footer class="card-footer">
         <p class="card-footer-item">
             <span>
-            <router-link to="{name: 'fullblog', params: {id: id}}">View Post</router-link>
+            <router-link :to="{name: 'fullblog', params: {id: id}}">View Post</router-link>
             </span>
         </p>
         </footer>
