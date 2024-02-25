@@ -1,7 +1,8 @@
 <template>
     <div>
         <Blog
-        :id="id" />
+        :id="id" 
+        />
     </div>
 
 </template>
