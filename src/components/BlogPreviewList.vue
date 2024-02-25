@@ -9,6 +9,7 @@
                     :blogTitle="blog.Title"
                     :date="blog.date"
                     :blogPreview="blog.Preview"
+                    :id="blog.id"
                     />           
                 </div>
             <div class="column is-one-fifth"></div>
