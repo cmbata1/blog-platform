@@ -28,7 +28,7 @@ export default {
     },
     data (){
         return {
-            blogs: ref([])
+            blogs: null
         }
     },
     async created(){
@@ -36,7 +36,7 @@ export default {
         const response = await fetch(endpoint);
         console.log(response);
         const blogs = await response.json();
-        this.blogs = blogs.value;
+        this.blogs = ref(blogs.value);
         console.log(this.blogs)
     }
 };
