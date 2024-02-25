@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="hero is-light">
+        <section class="hero" style="background-image: url('../assets/background.jpg');">
             <div class="hero-body">
                 <div class="box" style="text-align: center; margin: auto;">
                     <p class="title is-4" style="font-family: 'Brush Script MT', cursive;">Cat's Chronicles</p>
