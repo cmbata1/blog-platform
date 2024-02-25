@@ -1,13 +1,18 @@
 <template>
-    <b-navbar centered spaced>
+    <b-navbar spaced>
         <template #start>
+            <a class="title is-3 is-vcentered has-text-black" href="/" 
+            style="font-family: 'Brush Script MT', cursive;">
+                Cat's Chronicles
+            </a>
+        </template>
+        <template #end>
+            <b-navbar-item tag="router-link" :to="{name: 'home'}">
+                Home
+            </b-navbar-item>
             <b-navbar-item tag="router-link" :to="{name: 'about'}">
                 About
             </b-navbar-item>
-            <h3 class="title is-3 is-vcentered has-text-black" tag="router-link" :to="{ name: 'home' }" 
-            style="font-family: 'Brush Script MT', cursive; padding: 50px 25px 25px 25px;">
-                Cat's Chronicles
-            </h3>
             <b-navbar-item tag="router-link" :to="{name: 'blogs'}">
                 Blogs
             </b-navbar-item>

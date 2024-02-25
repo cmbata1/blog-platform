@@ -2,13 +2,13 @@
     <div>
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
         <div class="columns is-multiline" v-if="!isLoading && blog">
-            <div class="column is-one-fifth"></div>
-            <div class="column is-three-fifths">
+            <div class="column is-one-quarter"></div>
+            <div class="column">
                 <p class="title" v-text="blog.Title"/>
                 <p class="subtitle is-3" v-text="blog.date"/>
-                <p class="subtitle is-4" v-text="blog.Content"/>
+                <p class="subtitle is-5" style="color: #000;" v-text="blog.Content"/>
             </div>
-            <div class="column is-one-fifth"></div>
+            <div class="column is-one-quarter"></div>
         </div>
     </div>
 </template>
