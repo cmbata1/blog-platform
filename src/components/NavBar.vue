@@ -1,14 +1,14 @@
 <template>
     <b-navbar centered spaced>
         <template #start>
-            <b-navbar-item href="/about">
+            <b-navbar-item tag="router-link" :to="{name: 'about'}">
                 About
             </b-navbar-item>
             <h3 class="title is-3 is-vcentered has-text-black" tag="router-link" :to="{ path: '/' }" 
             style="font-family: 'Brush Script MT', cursive; padding: 50px 25px 25px 25px;">
                 Cat's Chronicles
             </h3>
-            <b-navbar-item href="/blogs">
+            <b-navbar-item tag="router-link" :to="{name: 'blogs'}">
                 Blogs
             </b-navbar-item>
         </template>
