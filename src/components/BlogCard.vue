@@ -3,7 +3,7 @@
         <div class="card-content">
         <p class="title" v-text="blogTitle" />
         <p class="subtitle is-5" v-text="date"/>
-        <p class="subtitle is-6" v-text="blogContent"/>
+        <p class="subtitle is-6" v-text="blogPreview"/>
         </div>
         <footer class="card-footer">
         <p class="card-footer-item">

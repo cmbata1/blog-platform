@@ -1,13 +1,11 @@
 <template>
-    <div class="columns is-centered">
-        <div class="column is-one-quarter">
-            <div v-for="blog in blogs" :key=blog>
-                <BlogCard 
-                :blogTitle="blog.Title"
-                :date="blog.date"
-                :blogPreview="blog.Preview"
-                />           
-            </div>
+    <div class="columns is-multiline is-centered">
+        <div class="column is-one-quarter" v-for="blog in blogs" :key=blog>
+            <BlogCard 
+            :blogTitle="blog.Title"
+            :date="blog.date"
+            :blogPreview="blog.Preview"
+            />           
         </div>
     </div>
 </template>
