@@ -1,5 +1,5 @@
 <template>
-    <div class="columns is-multiline is-centered">
+    <div class="columns is-multiline is-offset-one-quarter">
         <div class="column is-one-quarter" v-for="blog in blogs" :key=blog>
             <BlogCard 
             :blogTitle="blog.Title"
