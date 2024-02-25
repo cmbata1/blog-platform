@@ -1,5 +1,7 @@
 <template>
-
+    <div>
+        <h1>Lorem Ipsum</h1>
+    </div>
 </template>
 
 <script>
