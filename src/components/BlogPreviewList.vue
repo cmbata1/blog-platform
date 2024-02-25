@@ -35,7 +35,6 @@ export default {
         }
     },
     async created(){
-        await new Promise(resolve => setTimeout(resolve, 2000));
         const endpoint = '/data-api/rest/Blog';
         const response = await fetch(endpoint);
         const blogs = await response.json();
