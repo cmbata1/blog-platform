@@ -8,7 +8,7 @@
         <footer class="card-footer">
         <p class="card-footer-item">
             <span>
-            <a style="align-content: end;" href="#">View Post</a>
+            <router-link to="{name: 'blog', params: {id: id}}">View Post</router-link>
             </span>
         </p>
         </footer>
@@ -32,6 +32,9 @@ export default {
         },
         date:{
             type: Date, required: true
+        },
+        id:{
+            type: Number, required: true
         }
     }
 };
