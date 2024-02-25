@@ -4,12 +4,12 @@
         <p class="title" style="padding-left: 20%;">Latest Posts</p>
         <div class="columns is-multiline" v-if="!isLoading && blogs.length">
             <div class="column is-one-fifth"></div>
-                <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.id>
+                <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.Id>
                     <BlogCard 
                     :blogTitle="blog.Title"
                     :date="blog.date"
                     :blogPreview="blog.Preview"
-                    :id="blog.id"
+                    :id="blog.Id"
                     />           
                 </div>
             <div class="column is-one-fifth"></div>

@@ -34,7 +34,7 @@
         }
     },
     async created(){
-        const endpoint = `/data-api/rest/Blog/id`;
+        const endpoint = `/data-api/rest/Blog/Id`;
         const response = await fetch(`${endpoint}/${this.id}`);
         const blog = await response.json();
         this.blog = blog.value;
