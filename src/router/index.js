@@ -23,6 +23,7 @@ export default new Router({
         {
             name: "fullblog",
             path: "/blog/:id",
+            props: true,
             component: () => import("@/views/FullBlog")
         },
 
