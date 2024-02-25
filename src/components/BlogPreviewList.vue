@@ -1,11 +1,12 @@
 <template>
-    <div class="columns is-multiline">
+    <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
+    <div class="columns is-multiline" v-if="!isLoading && blogs.length">
         <div class="column is-one-fifth"></div>
-        <div class="column is-one-fifth" v-for="blog in blogs" :key=blog>
+        <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.id>
             <BlogCard 
-            :blogTitle="blog.Title"
+            :blog-title="blog.Title"
             :date="blog.date"
-            :blogPreview="blog.Preview"
+            :blog-preview="blog.Preview"
             />           
         </div>
         <div class="column is-one-fifth"></div>
@@ -27,14 +28,17 @@ export default {
     },
     data (){
         return {
-            blogs: null
+            blogs: null,
+            isLoading: true
         }
     },
     async created(){
+        await new Promise(resolve => setTimeout(resolve, 2000));
         const endpoint = '/data-api/rest/Blog';
         const response = await fetch(endpoint);
         const blogs = await response.json();
         this.blogs = blogs.value.slice(-3);
+        this.isLoading = false;
     }
 };
 </script>

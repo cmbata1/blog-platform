@@ -1,9 +1,9 @@
 <template>
     <div class="card">
         <div class="card-content">
-        <p class="title" v-text="blogTitle" />
+        <p class="title" v-text="blog-title" />
         <p class="subtitle is-5" v-text="date"/>
-        <p class="subtitle is-6" v-text="blogPreview"/>
+        <p class="subtitle is-6" v-text="blog-preview"/>
         </div>
         <footer class="card-footer">
         <p class="card-footer-item">

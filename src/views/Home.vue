@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h3 class="title is-3 is-vcentered has-text-black">Most Recent Posts</h3>
         <BlogPreviewList />
     </div>
 
