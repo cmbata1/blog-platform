@@ -4,7 +4,7 @@
             <b-navbar-item tag="router-link" :to="{name: 'about'}">
                 About
             </b-navbar-item>
-            <h3 class="title is-3 is-vcentered has-text-black" tag="router-link" :to="{ path: '/' }" 
+            <h3 class="title is-3 is-vcentered has-text-black" tag="router-link" :to="{ name: 'home' }" 
             style="font-family: 'Brush Script MT', cursive; padding: 50px 25px 25px 25px;">
                 Cat's Chronicles
             </h3>
