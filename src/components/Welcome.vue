@@ -1,9 +1,9 @@
 <template>
     <div>
-        <section class="hero" style="color: #8158a3;">
+        <section class="hero is-light">
             <div class="hero-body">
                 <div class="box" style="text-align: center; margin: auto;">
-                    <p class="title is-4">Welcome to Cat's Chronicles!</p>
+                    <p class="title is-4" style="font-family: 'Brush Script MT', cursive;">Cat's Chronicles</p>
                     <p class="subtitle">An amalgamation of my thoughts</p>
                 </div>
             </div>
