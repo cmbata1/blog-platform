@@ -18,7 +18,6 @@ import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import BlogCard from './BlogCard';
 import fetch from 'node-fetch'
-import ref from 'vue'
 
 Vue.use(Buefy)
 export default {
