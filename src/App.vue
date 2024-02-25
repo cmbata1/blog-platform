@@ -8,6 +8,7 @@
   <div class="hero is-fullheight is-lightblue" id="app">
     <div class="hero body" style="margin-bottom: 25px;">
       <NavBar />
+      <router-view></router-view>
     </div>
   </div>
 </template>
