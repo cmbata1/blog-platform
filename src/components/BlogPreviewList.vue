@@ -36,7 +36,7 @@ export default {
         const response = await fetch(endpoint);
         console.log(response);
         const blogs = await response.json();
-        this.blogs = ref(blogs.value);
+        this.blogs = blogs.value;
         console.log(this.blogs)
     }
 };
