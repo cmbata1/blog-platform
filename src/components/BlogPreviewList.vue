@@ -1,15 +1,17 @@
 <template>
-    <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
-    <div class="columns is-multiline" v-if="!isLoading && blogs.length">
-        <div class="column is-one-fifth"></div>
-        <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.id>
-            <BlogCard 
-            :blog-title="blog.Title"
-            :date="blog.date"
-            :blog-preview="blog.Preview"
-            />           
+    <div>
+        <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
+        <div class="columns is-multiline" v-if="!isLoading && blogs.length">
+            <div class="column is-one-fifth"></div>
+                <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.id>
+                    <BlogCard 
+                    :blog-title="blog.Title"
+                    :date="blog.date"
+                    :blog-preview="blog.Preview"
+                    />           
+                </div>
+            <div class="column is-one-fifth"></div>
         </div>
-        <div class="column is-one-fifth"></div>
     </div>
 </template>
 
