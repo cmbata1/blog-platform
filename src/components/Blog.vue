@@ -7,16 +7,15 @@
             </div>
         </div>
     </section>
-    <div>
-        <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
-        <div class="columns is-multiline" v-if="!isLoading && blog">
-            <div class="column is-one-quarter"></div>
-            <div class="column">
-                <p class="subtitle is-5" style="color: #000;" v-text="blog.Content"/>
-            </div>
-            <div class="column is-one-quarter"></div>
+    <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
+    <div class="columns is-multiline" v-if="!isLoading && blog">
+        <div class="column is-one-quarter"></div>
+        <div class="column">
+            <p class="subtitle is-5" style="color: #000;" v-text="blog.Content"/>
         </div>
+        <div class="column is-one-quarter"></div>
     </div>
+
 </template>
   
   <script>
