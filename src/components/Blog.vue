@@ -44,16 +44,12 @@
         const response = await fetch(`${endpoint}/${this.id}`);
         const blog = await response.json();
         this.blog = blog.value[0];
-        convertDate(this.blog);
-        this.isLoading = false;
-    },
-    methods:{
-        convertDate(blog){
-            var monthNames = ["January", "February", "March", "April", "May", "June",
-                  "July", "August", "September", "October", "November", "December"];
-            blog.date = "" + monthNames[blog.date.getMonth()] + " " + blog.date.getDate() + ", " + blog.date.getYear();
-        }
 
+        var monthNames = ["January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"];
+            this.blog.date = "" + monthNames[this.blog.date.getMonth()] + " " + this.blog.date.getDate() + ", " + this.blog.date.getYear();
+        this.isLoading = false;
     }
+    
   };
   </script>
