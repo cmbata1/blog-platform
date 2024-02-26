@@ -1,14 +1,14 @@
 <template>
     <div>
         <section class="hero is-light">
-            <div class="hero-body">
-                <div class="box" style="align-content: center; margin: auto;">
+            <div class="hero-body" style="align-content: center; margin: auto;">
+                <div class="box" style="text-align: center;">
                     <p class="title is-3" style="font-family: 'Brush Script MT', cursive;">Welcome</p>
                     <p class="subtitle">An amalgamation of my thoughts</p>
-                    <figure class="image is-square">
-                        <img src="flower">
-                    </figure>
                 </div>
+                <figure class="image is-square">
+                        <img src="flower">
+                </figure>
             </div>
         </section>
     </div>
@@ -24,7 +24,7 @@
     name: "Welcome",
     data(){
         return{
-            flower: require('../assets/Cherry-Blossom.jpg')
+            flower: require('./../assets/Cherry-Blossom.png')
         }
     }
   };
