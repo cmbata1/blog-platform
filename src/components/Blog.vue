@@ -44,12 +44,13 @@
         const response = await fetch(`${endpoint}/${this.id}`);
         const blog = await response.json();
         this.blog = blog.value[0];
+        const dummyDate = new Date(this.blog.date);
 
         var monthNames = ["January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December"];
-            this.blog.date = "" + monthNames[this.blog.date.getMonth()] + " " + this.blog.date.getDate() + ", " + this.blog.date.getYear();
+        this.blog.date = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getYear();
         this.isLoading = false;
     }
-    
+
   };
   </script>

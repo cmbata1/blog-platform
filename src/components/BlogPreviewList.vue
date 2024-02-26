@@ -49,10 +49,12 @@ export default {
         const blogs = await response.json();
         this.blogs = blogs.value.slice(-3);
 
-        this.blogs.forEach(blog => {
-            var monthNames = ["January", "February", "March", "April", "May", "June",
+        var monthNames = ["January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December"];
-            blog.date = "" + monthNames[blog.date.getMonth()] + " " + blog.date.getDate() + ", " + blog.date.getYear();                
+
+        this.blogs.forEach(blog => {
+            var dummyDate = new Date(this.blog.date);
+            blog.date = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getYear();                
             });
 
         this.isLoading = false;
