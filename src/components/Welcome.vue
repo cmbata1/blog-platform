@@ -7,9 +7,11 @@
                     <p class="subtitle">an amalgamation of my thoughts</p>
                 </div>
                 <br>
-                <figure class="image is-square">
-                    <img :src="imageUrl">
-                </figure>
+                <div class="box is-shadowless">
+                    <figure class="image is-square">
+                        <img :src="imageUrl">
+                    </figure>
+                </div>
             </div>
         </section>
     </div>
