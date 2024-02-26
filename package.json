@@ -12,6 +12,8 @@
     "@azure/identity": "^4.0.1",
     "@azure/keyvault-secrets": "^4.8.0",
     "@azure/storage-blob": "^12.17.0",
+    "@jamescoyle/vue-icon": "^0.1.2",
+    "@mdi/js": "^7.4.47",
     "brfs": "^2.0.2",
     "browserify-shim": "^3.8.16",
     "buefy": "^0.9.28",
