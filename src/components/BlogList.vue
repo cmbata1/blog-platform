@@ -8,13 +8,13 @@
             </div>
         </section>
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
-        <b-table style="padding-top: 5%;" v-if="!isLoading && data.length"
+        <b-table v-if="!isLoading && data.length"
             :data="data"
             paginated=true
             pagination-position="both"
-            defaultSortDirection="desc"
+            default-sort-direction="desc"
             per-page=10
-            default-sort="id"
+            default-sort="Id"
             aria-next-label="Next page"
             aria-previous-label="Previous page"
             aria-page-label="Page"
