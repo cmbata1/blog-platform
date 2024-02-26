@@ -20,14 +20,14 @@
   import Buefy from 'buefy';
   import 'buefy/dist/buefy.css';
 
-  const imageUrl = import('./../assets/Cherry-Blossom.png');
+  const imageUrl = require('./../assets/Cherry-Blossom.png');
 
   Vue.use(Buefy)
   export default {
     name: "Welcome",
     data(){
         return{
-            imageUrl
+            imageUrl: imageUrl
         }
     }
   };
