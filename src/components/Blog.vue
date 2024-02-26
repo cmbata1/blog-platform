@@ -12,7 +12,7 @@
         <div style="padding-top: 3%;" class="columns is-multiline" v-if="!isLoading && blog">
             <div class="column is-one-quarter"></div>
             <div class="column">
-                <p class="subtitle is-5" style="color: #000; white-space: pre" v-text="blog.Content"/>
+                <p class="subtitle is-5" style="color: #000; white-space: pre-wrap" v-text="blog.Content"/>
             </div>
             <div class="column is-one-quarter"></div>
         </div>
@@ -44,7 +44,6 @@
         const response = await fetch(`${endpoint}/${this.id}`);
         const blog = await response.json();
         this.blog = blog.value[0];
-        // this.blog.Content = this.blog.Content.replace("/\r\n", "/\\n")
         const dummyDate = new Date(this.blog.date);
         console.log(dummyDate);
         console.log(dummyDate.getFullYear())
