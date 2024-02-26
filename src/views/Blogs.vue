@@ -24,8 +24,10 @@
                 {{ props.row.Id }}
             </b-table-column>
 
-            <b-table-column field="Title" label="Title" searchable sortable v-slot="props" tag="router-link" :to="{name: 'blogs'}">
-                {{ props.row.Title }}
+            <b-table-column field="Title" label="Title" searchable sortable v-slot="props">
+                <router-link :to="{name: 'fullblog', params: {id: id}}">
+                    {{ props.row.Title }}
+                </router-link>
             </b-table-column>
 
             <b-table-column field="Content" label="Preview" searchable sortable v-slot="props">
