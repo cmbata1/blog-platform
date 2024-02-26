@@ -8,25 +8,27 @@
             </div>
         </section>
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
-        <b-table v-if="!isLoading && data.length"
+        <b-table style="padding-top: 5%;" v-if="!isLoading && data.length"
             :data="data"
             paginated=true
+            pagination-position="both"
+            defaultSortDirection="desc"
             per-page=10
-            default-sort="user.first_name"
+            default-sort="id"
             aria-next-label="Next page"
             aria-previous-label="Previous page"
             aria-page-label="Page"
             aria-current-label="Current page">
 
-            <b-table-column field="id" label="ID" width="40" sortable numeric v-slot="props">
+            <b-table-column field="id" label="ID" width="40" searchable sortable numeric v-slot="props">
                 {{ props.row.Id }}
             </b-table-column>
 
-            <b-table-column field="title" label="Title" sortable v-slot="props">
+            <b-table-column field="title" label="Title" searchable sortable v-slot="props">
                 {{ props.row.Title }}
             </b-table-column>
 
-            <b-table-column field="content" label="Content" sortable v-slot="props">
+            <b-table-column field="content" label="Preview" searchable sortable v-slot="props">
                 {{ props.row.Preview }}
             </b-table-column>
 
