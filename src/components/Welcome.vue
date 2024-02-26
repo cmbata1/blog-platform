@@ -6,9 +6,10 @@
                     <p class="title is-1" style="font-family: 'Brush Script MT', cursive;">Welcome</p>
                     <p class="subtitle">an amalgamation of my thoughts</p>
                 </div>
+                <br>
                 <div class="box is-shadowless">
                     <figure class="image is-square">
-                        <img :src="imageUrl">
+                        <img :src="imageUrl"/>
                     </figure>
                 </div>
 
