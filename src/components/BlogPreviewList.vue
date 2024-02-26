@@ -54,7 +54,7 @@ export default {
 
         this.blogs.forEach(blog => {
             var dummyDate = new Date(blog.date);
-            blog.date = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getYear();                
+            blog.date = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();                
             });
 
         this.isLoading = false;
