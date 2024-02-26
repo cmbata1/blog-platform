@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="hero" style="background-color: #b8b1c4;">
+        <section class="hero" style="background-color: ##86b9ca;">
             <div class="hero-body" style="align-content: center; margin: auto;">
                 <div class="container" style="text-align: center;">
                     <p class="title is-1" style="font-family: 'Brush Script MT', cursive;">Blogs</p>
@@ -20,7 +20,7 @@
             aria-page-label="Page"
             aria-current-label="Current page">
 
-            <b-table-column field="id" label="ID" width="40" searchable sortable numeric v-slot="props">
+            <b-table-column field="id" label="ID" width="40" sortable numeric v-slot="props">
                 {{ props.row.Id }}
             </b-table-column>
 
