@@ -15,6 +15,7 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import '@mdi/font/css/materialdesignicons.css';
 export default {
   name: "App",
   components: {
