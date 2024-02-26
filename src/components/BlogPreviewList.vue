@@ -14,10 +14,13 @@
                 </div>
             <div class="column is-one-fifth"></div>
         </div>
-        <b-button type="is-primary-light"
-                :icon-right="mdiArrowRight">
-                Delete
+        <div style="padding-left: 60%;">
+            <b-button type="is-primary"
+                icon-right="arrow-right">
+                View All Posts
             </b-button>
+        </div>
+
     </div>
 </template>
 
@@ -27,7 +30,6 @@ import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import BlogCard from './BlogCard';
 import fetch from 'node-fetch'
-import { mdiArrowRight } from '@mdi/js';
 
 Vue.use(Buefy)
 export default {
@@ -38,8 +40,7 @@ export default {
     data (){
         return {
             blogs: null,
-            isLoading: true,
-            iconPath: mdiArrowRight
+            isLoading: true
         }
     },
     async created(){
