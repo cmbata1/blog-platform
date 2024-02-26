@@ -7,9 +7,9 @@
                 </div>
             </div>
         </section>
-        <div class="title is-4" style="padding: 3% 25% 3%;">The Truth...</div>
-        <div class="subtitle is-5" style="padding: 3% 25% 3%;">Describing myself is something that I've always found to be difficult to do. Honestly, I don't really know who I am. So, I'm using a different approach: here are some pictures that represent what I might be thinking about at any given moment of the day.</div>
-        <div class="tile is-ancestor">
+        <div class="title is-4" style="padding: 3% 25% 0%;">The Truth...</div>
+        <div class="subtitle is-5" style="padding: 3% 25% 3%;">Describing myself is something that I've always found to be difficult to do. Honestly, I don't really know who I am. I ponder words that I might use to describe myself, but always, my mind ends up blank. So, I'm using a different approach: here are some pictures that represent what I might be thinking about at any given moment of the day.</div>
+        <div class="tile is-ancestor" style="padding: 0% 25% 0%;">
             <div class="tile is-vertical is-8">
                 <div class="tile">
                 <div class="tile is-parent is-vertical">

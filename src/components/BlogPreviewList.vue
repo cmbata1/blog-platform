@@ -9,9 +9,8 @@
                 View All Blogs
             </b-button>
         </p>
-        <div class="columns is-multiline" style="padding-bottom: 10%;" v-if="!isLoading && blogs.length">
-            <div class="column is-one-fifth"></div>
-                <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.Id>
+        <div class="columns is-multiline is-vcentered" style="padding: 0% 20% 10%;" v-if="!isLoading && blogs.length">
+                <div class="column is-one-third" v-for="blog in blogs" :key=blog.Id>
                     <BlogCard 
                     :blogTitle="blog.Title"
                     :date="blog.date"
@@ -19,7 +18,6 @@
                     :id="blog.Id"
                     />           
                 </div>
-            <div class="column is-one-fifth"></div>
         </div>
     </div>
 </template>
