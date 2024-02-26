@@ -48,7 +48,18 @@ export default {
         const response = await fetch(endpoint);
         const blogs = await response.json();
         this.blogs = blogs.value.slice(-3);
+        convertDates(blogs);
         this.isLoading = false;
+    },
+    methods:{
+        convertDates(blogs){
+            blogs.forEach(blog => {
+            var monthNames = ["January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"];
+            blog.date = "" + monthNames[blog.date.getMonth()] + " " + blog.date.getDate() + ", " + blog.date.getYear();                
+            });
+        }
+
     }
 };
 </script>
