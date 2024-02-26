@@ -19,7 +19,7 @@
   import Buefy from 'buefy';
   import 'buefy/dist/buefy.css';
 
-  const imageUrl = require('./../assets/Cherry-Blossom.png');
+  const imageUrl = require('./../assets/Cherry-Blossom-Transparent.jpg');
 
   Vue.use(Buefy)
   export default {
