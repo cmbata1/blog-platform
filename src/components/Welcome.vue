@@ -1,6 +1,3 @@
-<script setup>
-const imageUrl = import('./../assets/Cherry-Blossom.png');
-</script>
 <template>
     <div>
         <section class="hero" style="background-color: #b8b1c4;">
@@ -25,8 +22,13 @@ const imageUrl = import('./../assets/Cherry-Blossom.png');
   import Buefy from 'buefy';
   import 'buefy/dist/buefy.css';
 
+  const imageUrl = import('./../assets/Cherry-Blossom.png');
+
   Vue.use(Buefy)
   export default {
     name: "Welcome",
+    data(){
+        imageUrl
+    }
   };
   </script>
