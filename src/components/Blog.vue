@@ -46,10 +46,11 @@
         this.blog = blog.value[0];
         const dummyDate = new Date(this.blog.date);
         console.log(dummyDate);
+        console.log(dummyDate.getFullYear())
 
         var monthNames = ["January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December"];
-        const strDate = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getYear();
+        const strDate = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();
         this.blog.date = strDate;
         this.isLoading = false;
     }
