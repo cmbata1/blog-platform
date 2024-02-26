@@ -2,14 +2,14 @@
     <div>
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
         <p class="title" style="padding: 5% 0% 0% 20%;">
-            Latest Posts
+            Latest Blogs
             <b-button tag="router-link" :to="{name: 'blogs'}" style="margin-left: 1%;" 
                 type="is-primary"
                 icon-right="arrow-right">
-                View All Posts
+                View All Blogs
             </b-button>
         </p>
-        <div class="columns is-multiline" v-if="!isLoading && blogs.length">
+        <div class="columns is-multiline" style="padding-bottom: 10%;" v-if="!isLoading && blogs.length">
             <div class="column is-one-fifth"></div>
                 <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.Id>
                     <BlogCard 
@@ -44,10 +44,10 @@ export default {
         }
     },
     async created(){
-        const endpoint = '/data-api/rest/Blog';
+        const endpoint = '/data-api/rest/Blog?$orderby=Id, desc';
         const response = await fetch(endpoint);
         const blogs = await response.json();
-        this.blogs = blogs.value.slice(-3);
+        this.blogs = blogs.value.slice(3);
 
         var monthNames = ["January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December"];
