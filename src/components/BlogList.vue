@@ -8,7 +8,7 @@
             </div>
         </section>
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
-        <b-table
+        <b-table v-if="!isLoading && data.length"
             :data="data"
             paginated=true
             per-page=10
