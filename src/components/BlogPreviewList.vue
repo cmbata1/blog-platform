@@ -3,7 +3,8 @@
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
         <p class="title" style="padding: 5% 0% 0% 20%;">
             Latest Posts
-            <b-button type="is-primary"
+            <b-button tag="router-link" :to="{name: 'blogs'}" style="margin-left: 1%;" 
+                type="is-primary"
                 icon-right="arrow-right">
                 View All Posts
             </b-button>

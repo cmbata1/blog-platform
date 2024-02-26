@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Lorem Ipsum</h1>
+        <BlogList />
     </div>
 </template>
 
@@ -8,6 +8,13 @@
 import Vue from 'vue'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import BlogList from './../components/BlogList.vue'
 
 Vue.use(Buefy)
+export default {
+  name: "Blogs",
+  components: {
+    BlogList,
+}
+};
 </script>
