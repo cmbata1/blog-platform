@@ -1,15 +1,15 @@
 <template>
     <div>
-        <section class="hero" style="background-color: #538152;">
+        <section class="hero" style="background-color: #86b9ca;">
             <div class="hero-body" style="align-content: center; margin: auto;">
                 <div class="container" style="text-align: center;">
-                    <p class="title is-1" style="font-family: 'Brush Script MT', cursive;" v-text="blog.Title"/>
-                    <p class="subtitle is-3" v-text="blog.date"/>
+                    <p v-if="!isLoading && blog" class="title is-1" style="font-family: 'Brush Script MT', cursive;" v-text="blog.Title"/>
+                    <p v-if="!isLoading && blog" class="subtitle is-3" style="color: black;" v-text="new Date(blog.date)"/>
                 </div>
             </div>
         </section>
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
-        <div class="columns is-multiline" v-if="!isLoading && blog">
+        <div style="padding-bottom: 10%;" class="columns is-multiline" v-if="!isLoading && blog">
             <div class="column is-one-quarter"></div>
             <div class="column">
                 <p class="subtitle is-5" style="color: #000;" v-text="blog.Content"/>
