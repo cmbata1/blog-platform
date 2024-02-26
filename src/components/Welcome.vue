@@ -7,12 +7,9 @@
                     <p class="subtitle">an amalgamation of my thoughts</p>
                 </div>
                 <br>
-                <div class="box is-shadowless">
-                    <figure class="image is-square">
-                        <img :src="imageUrl"/>
-                    </figure>
-                </div>
-
+                <figure class="image is-square">
+                    <img :src="imageUrl">
+                </figure>
             </div>
         </section>
     </div>
@@ -29,7 +26,9 @@
   export default {
     name: "Welcome",
     data(){
-        imageUrl
+        return{
+            imageUrl
+        }
     }
   };
   </script>
