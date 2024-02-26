@@ -2,6 +2,12 @@
     <div>
         <b-loading :is-full-page="false" :active="isLoading" :can-cancel="false"></b-loading>
         <p class="title" style="padding: 5% 0% 0% 20%;">Latest Posts</p>
+        <div style="padding-left: 60%;">
+            <b-button type="is-primary"
+                icon-right="arrow-right">
+                View All Posts
+            </b-button>
+        </div>
         <div class="columns is-multiline" v-if="!isLoading && blogs.length">
             <div class="column is-one-fifth"></div>
                 <div class="column is-one-fifth" v-for="blog in blogs" :key=blog.Id>
@@ -14,13 +20,6 @@
                 </div>
             <div class="column is-one-fifth"></div>
         </div>
-        <div style="padding-left: 60%;">
-            <b-button type="is-primary"
-                icon-right="arrow-right">
-                View All Posts
-            </b-button>
-        </div>
-
     </div>
 </template>
 
@@ -30,6 +29,7 @@ import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import BlogCard from './BlogCard';
 import fetch from 'node-fetch'
+import '@mdi/js'
 
 Vue.use(Buefy)
 export default {
