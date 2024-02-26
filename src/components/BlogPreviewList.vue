@@ -44,7 +44,7 @@ export default {
         }
     },
     async created(){
-        const endpoint = '/data-api/rest/Blog?$orderby=Id, desc';
+        const endpoint = '/data-api/rest/Blog?$orderby=Id desc';
         const response = await fetch(endpoint);
         const blogs = await response.json();
         this.blogs = blogs.value.slice(3);

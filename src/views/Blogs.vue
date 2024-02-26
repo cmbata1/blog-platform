@@ -25,7 +25,7 @@
             </b-table-column>
 
             <b-table-column field="Title" label="Title" searchable sortable v-slot="props">
-                <router-link :to="{name: 'fullblog', params: {id: id}}">
+                <router-link :to="{name: 'fullblog', params: {id: props.row.Id}}">
                     {{ props.row.Title }}
                 </router-link>
             </b-table-column>
