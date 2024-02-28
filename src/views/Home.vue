@@ -2,6 +2,7 @@
     <div>
         <Welcome />
         <BlogPreviewList />
+        <SongsOfTheDay />
     </div>
 
 </template>
@@ -12,13 +13,15 @@ import Welcome from "@/components/Welcome.vue";
 import Vue from 'vue'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import SongsOfTheDay from "@/components/SongsOfTheDay.vue";
 
 Vue.use(Buefy);
 export default {
   name: "Home",
   components: {
     BlogPreviewList,
-    Welcome
+    Welcome,
+    SongsOfTheDay
 }
 };
 
