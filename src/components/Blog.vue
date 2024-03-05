@@ -44,6 +44,7 @@
         const response = await fetch(`${endpoint}/${this.id}`);
         const blog = await response.json();
         this.blog = blog.value[0];
+        console.log(this.blog.date);
         const dummyDate = new Date(this.blog.date);
         console.log(dummyDate);
         console.log(dummyDate.getFullYear())
