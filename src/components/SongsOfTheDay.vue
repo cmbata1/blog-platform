@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="hero is-light">
-            <div class="hero-body" style="align-content: center; margin: auto;">
+            <div class="hero-body" style="padding: 5% 0% 0% 20%;">
               <p class="title">Songs of the Day</p>
             </div>
         </section>

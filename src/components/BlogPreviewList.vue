@@ -51,7 +51,7 @@ export default {
                   "July", "August", "September", "October", "November", "December"];
 
         this.blogs.forEach(blog => {
-            var dummyDate = new Date(blog.date);
+            const dummyDate = new Date(blog.date.replace(/-/g, '/'));
             blog.date = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();                
             });
 
