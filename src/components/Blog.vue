@@ -44,14 +44,11 @@
         const response = await fetch(`${endpoint}/${this.id}`);
         const blog = await response.json();
         this.blog = blog.value[0];
-        console.log(this.blog.date);
         const dummyDate = new Date(this.blog.date);
-        console.log(dummyDate);
-        console.log(dummyDate.getFullYear())
 
         var monthNames = ["January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December"];
-        const strDate = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();
+        const strDate = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + 1 + ", " + dummyDate.getFullYear();
         this.blog.date = strDate;
         this.isLoading = false;
     }
