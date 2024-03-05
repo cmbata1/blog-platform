@@ -1,8 +1,8 @@
 <template>
     <div>
         <section class="hero is-light">
-            <p class="title">Songs of the Day</p>
             <div class="hero-body" style="align-content: center; margin: auto;">
+              <p class="title">Songs of the Day</p>
             </div>
         </section>
     </div>
