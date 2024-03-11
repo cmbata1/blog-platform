@@ -1,6 +1,6 @@
 <template>
-    <title>Blogs</title>
     <div>
+        <title>Blogs</title>
         <section class="hero" style="background-color: #86b9ca;">
             <div class="hero-body" style="align-content: center; margin: auto;">
                 <div class="container" style="text-align: center;">
