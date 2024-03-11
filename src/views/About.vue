@@ -1,8 +1,5 @@
 <template>
     <div>
-        <head>
-            <title>About</title>
-        </head>
         <section class="hero" style="background-color: #86b9ca;">
             <div class="hero-body" style="align-content: center; margin: auto;">
                 <div class="container" style="text-align: center;">
@@ -74,6 +71,9 @@ export default {
             type: Number,
             required: true,
         }
+    },
+    mounted(){
+        document.title = "About";
     }
 };
 </script>

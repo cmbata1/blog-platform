@@ -1,8 +1,5 @@
 <template>
     <div>
-        <head>
-            <title>Blogs</title>
-        </head>
         <section class="hero" style="background-color: #86b9ca;">
             <div class="hero-body" style="align-content: center; margin: auto;">
                 <div class="container" style="text-align: center;">
@@ -62,6 +59,7 @@ export default {
         }
     },
     async created(){
+        document.title = "Blogs";
         const endpoint = '/data-api/rest/Blog';
         const response = await fetch(endpoint);
         const blogs = await response.json();

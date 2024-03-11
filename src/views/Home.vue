@@ -1,8 +1,5 @@
 <template>
     <div>
-        <head>
-            <title>Cat's Chronicles</title>
-        </head>
         <Welcome />
         <BlogPreviewList />
         <SongsOfTheDay />
@@ -25,6 +22,9 @@ export default {
     BlogPreviewList,
     Welcome,
     SongsOfTheDay
+},
+mounted(){
+    document.title = "Cat's Chronicles";
 }
 };
 
