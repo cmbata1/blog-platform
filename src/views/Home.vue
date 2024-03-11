@@ -23,7 +23,7 @@ export default {
     Welcome,
     SongsOfTheDay
 },
-mounted(){
+created(){
     document.title = "Cat's Chronicles";
 }
 };

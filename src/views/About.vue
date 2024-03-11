@@ -72,7 +72,7 @@ export default {
             required: true,
         }
     },
-    mounted(){
+    created(){
         document.title = "About";
     }
 };
