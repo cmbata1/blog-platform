@@ -1,4 +1,5 @@
 <template>
+    <title>Cat's Chronicles</title>
     <div>
         <Welcome />
         <BlogPreviewList />

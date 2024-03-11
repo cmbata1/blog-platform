@@ -1,4 +1,5 @@
 <template>
+    <title>About</title>
     <div>
         <section class="hero" style="background-color: #86b9ca;">
             <div class="hero-body" style="align-content: center; margin: auto;">

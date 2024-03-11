@@ -51,6 +51,7 @@
         const strDate = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();
         this.blog.date = strDate;
         this.isLoading = false;
+        document.title = this.blog.Title;
     }
 
   };
