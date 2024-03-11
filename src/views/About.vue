@@ -1,6 +1,8 @@
 <template>
     <div>
-        <title>About</title>
+        <head>
+            <title>About</title>
+        </head>
         <section class="hero" style="background-color: #86b9ca;">
             <div class="hero-body" style="align-content: center; margin: auto;">
                 <div class="container" style="text-align: center;">

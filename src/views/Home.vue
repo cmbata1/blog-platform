@@ -1,6 +1,8 @@
 <template>
     <div>
-        <title>Cat's Chronicles</title>
+        <head>
+            <title>Cat's Chronicles</title>
+        </head>
         <Welcome />
         <BlogPreviewList />
         <SongsOfTheDay />
