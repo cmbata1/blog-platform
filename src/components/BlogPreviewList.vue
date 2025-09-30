@@ -52,7 +52,7 @@ export default {
 
         this.blogs.forEach(blog => {
             const dummyDate = new Date(blog.date.replace(/-/g, '/'));
-            blog.date = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();                
+            blog.Date = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();                
             });
 
         this.isLoading = false;

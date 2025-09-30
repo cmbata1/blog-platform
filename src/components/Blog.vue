@@ -4,7 +4,7 @@
             <div class="hero-body" style="align-content: center; margin: auto;">
                 <div class="container" style="text-align: center;">
                     <p v-if="!isLoading && blog" class="title is-1" style="font-family: 'Brush Script MT', cursive;" v-text="blog.Title"/>
-                    <p v-if="!isLoading && blog" class="subtitle is-5" style="color: black;" v-text="blog.date"/>
+                    <p v-if="!isLoading && blog" class="subtitle is-5" style="color: black;" v-text="blog.Date"/>
                 </div>
             </div>
         </section>
@@ -44,12 +44,12 @@
         const response = await fetch(`${endpoint}/${this.id}`);
         const blog = await response.json();
         this.blog = blog.value[0];
-        const dummyDate = new Date(this.blog.date.replace(/-/g, '/'));
+        const dummyDate = new Date(this.blog.Date.replace(/-/g, '/'));
 
         var monthNames = ["January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December"];
         const strDate = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();
-        this.blog.date = strDate;
+        this.blog.Date = strDate;
         this.isLoading = false;
         document.title = this.blog.Title;
     }
