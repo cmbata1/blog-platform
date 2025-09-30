@@ -31,7 +31,7 @@ The project demonstrates modern frontend development practices with a clean UI, 
 ### Setup
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/vue-test-main.git
+git clone https://github.com/cmbata1/vue-test-main.git
 cd vue-test-main
 
 # Install dependencies
@@ -39,3 +39,4 @@ npm install
 
 # Start dev server
 npm run serve
+
