@@ -3,9 +3,7 @@
   "data-source": {
     "database-type": "mssql",
     "connection-string": "",
-    "options": {
-      "set-session-context": false 
-    }
+    "options": {}
   },
   "runtime": {
     "rest": {
@@ -20,7 +18,7 @@
     },
     "host": {
       "cors": {
-        "origins": ["http://localhost:4280"],
+        "origins": [],
         "allow-credentials": false
       },
       "authentication": {
@@ -31,7 +29,7 @@
   },
   "entities": {
     "Blog": {
-      "source": "dbo.blogs",
+      "source": "blogs",
       "permissions": [
         {
           "role": "anonymous",
