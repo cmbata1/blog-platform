@@ -13,7 +13,7 @@
                 <div class="column is-one-third" v-for="blog in blogs" :key=blog.Id>
                     <BlogCard 
                     :blogTitle="blog.Title"
-                    :date="blog.date"
+                    :date="blog.Date"
                     :blogPreview="blog.Preview"
                     :id="blog.Id"
                     />           
@@ -51,7 +51,7 @@ export default {
                   "July", "August", "September", "October", "November", "December"];
 
         this.blogs.forEach(blog => {
-            const dummyDate = new Date(blog.date.replace(/-/g, '/'));
+            const dummyDate = new Date(blog.Date.replace(/-/g, '/'));
             blog.Date = "" + monthNames[dummyDate.getMonth()] + " " + dummyDate.getDate() + ", " + dummyDate.getFullYear();                
             });
 
