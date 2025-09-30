@@ -31,7 +31,7 @@
   },
   "entities": {
     "Blog": {
-      "source": "dbo.blogs",
+      "source": "dbo.Blogs",
       "permissions": [
         {
           "role": "anonymous",
