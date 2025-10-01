@@ -4,31 +4,18 @@
       <div class="sotd-container">
         <h1 class="title sotd-title">Songs of the Day</h1>
 
-        <div class="sotd-grid">
-          <b-card :header="videos[0].title" class="sotd-card">
+        <div class="sotd-single">
+          <b-card :header="video.title" class="sotd-card">
             <div class="sotd-frame">
               <iframe
-                :src="embedUrl(videos[0].url)"
+                :src="embedUrl(video.url)"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
             </div>
-            <p v-if="videos[0].note" class="mt-3">{{ videos[0].note }}</p>
-          </b-card>
-
-          <b-card :header="videos[1].title" class="sotd-card">
-            <div class="sotd-frame">
-              <iframe
-                :src="embedUrl(videos[1].url)"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <p v-if="videos[1].note" class="mt-3">{{ videos[1].note }}</p>
+            <p v-if="video.note" class="mt-3">{{ video.note }}</p>
           </b-card>
         </div>
       </div>
@@ -46,18 +33,11 @@ export default {
   name: 'SongsOfTheDay',
   data () {
     return {
-      videos: [
-        {
-          url: 'https://www.youtube.com/watch?v=xlyrt5eAtKI',
-          note: 'Why I picked this one... it has a very fun beat',
-          title: 'Red Velvet – Chill Kill MV'
-        },
-        {
-          url: 'https://youtu.be/xaPNR-_Cfn0',
-          note: 'Chappell Roan energy 🚀 Hot to Go',
-          title: 'Chappell Roan – Hot to Go'
-        }
-      ]
+      video: {
+        url: 'https://www.youtube.com/watch?v=xlyrt5eAtKI',
+        note: 'Why I picked this one... it has a very fun beat',
+        title: 'Red Velvet – Chill Kill MV'
+      }
     }
   },
   methods: {
@@ -95,14 +75,18 @@ export default {
   flex-direction: column;
 }
 
+/* tighter like your homepage section */
 .sotd-section {
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
 }
 
+/* match the “Latest Blogs” left alignment:
+   use 20% viewport padding-left and remove max-width so edges line up */
 .sotd-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   padding-left: 20%;
   padding-right: 2rem;
 }
@@ -112,23 +96,12 @@ export default {
   text-align: left;
 }
 
-.sotd-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
+/* single card area */
+.sotd-single {
+  max-width: 760px; /* keeps a nice readable width; tweak if you want bigger */
 }
 
-@media (min-width: 1024px) {
-  .sotd-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.sotd-card {
-  height: 100%;
-  border-radius: 10px;
-}
-
+/* responsive 16:9 frame */
 .sotd-frame {
   position: relative;
   width: 100%;
@@ -141,6 +114,10 @@ export default {
   inset: 0;
   width: 100%;
   height: 100%;
+}
+
+.sotd-card {
+  border-radius: 10px;
 }
 
 .mt-3 { margin-top: 0.75rem; }
