@@ -2,7 +2,7 @@
   <div class="sotd-page">
     <section class="sotd-section">
       <div class="sotd-container">
-        <h1 class="title has-text-centered sotd-title">Songs of the Day</h1>
+        <h1 class="title sotd-title">Songs of the Day</h1>
 
         <div class="sotd-grid">
           <b-card :header="videos[0].title" class="sotd-card">
@@ -53,9 +53,9 @@ export default {
           title: 'Red Velvet – Chill Kill MV'
         },
         {
-          url: 'https://youtu.be/vtW_4j7SsZk?si=KQEnZd7kze_iIL3H',
-          note: 'A dreamy track — one of Taylor\'s best re-recordings',
-          title: 'Taylor Swift – Wildest Dreams (Taylor\'s Version)'
+          url: 'https://youtu.be/xaPNR-_Cfn0',
+          note: 'Chappell Roan energy 🚀 Hot to Go',
+          title: 'Chappell Roan – Hot to Go'
         }
       ]
     }
@@ -88,47 +88,47 @@ export default {
 </script>
 
 <style scoped>
-/* full-page background */
 .sotd-page {
   min-height: 100vh;
-  background-color: #d6f5f2; /* match your homepage teal */
+  background-color: #d6f5f2;
   display: flex;
   flex-direction: column;
 }
 
-/* much tighter top padding to match your second screenshot */
 .sotd-section {
-  padding-top: 0.75rem;
+  padding-top: 1.5rem;
   padding-bottom: 2.5rem;
 }
 
-/* wider content and centered */
 .sotd-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding-left: 20%;
+  padding-right: 2rem;
 }
 
-/* heading spacing trimmed */
 .sotd-title {
   margin-bottom: 1rem;
+  text-align: left;
 }
 
-/* two-up grid on desktop, stacks on narrow screens */
 .sotd-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.75rem;
-  align-items: start;
 }
 
-/* card polish */
+@media (min-width: 1024px) {
+  .sotd-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .sotd-card {
   height: 100%;
   border-radius: 10px;
 }
 
-/* responsive 16:9 without relying on Bulma's .video helper */
 .sotd-frame {
   position: relative;
   width: 100%;
@@ -144,9 +144,4 @@ export default {
 }
 
 .mt-3 { margin-top: 0.75rem; }
-
-/* if you want an even tighter top, drop to 0.5rem */
-@media (min-width: 1280px) {
-  .sotd-section { padding-top: 0.75rem; }
-}
 </style>
