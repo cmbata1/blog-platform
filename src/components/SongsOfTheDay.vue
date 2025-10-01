@@ -44,6 +44,7 @@
 import Vue from 'vue'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
+
 Vue.use(Buefy)
 
 export default {
@@ -53,13 +54,13 @@ export default {
       videos: [
         {
           url: 'https://www.youtube.com/watch?v=xlyrt5eAtKI',
-          note: "Why I picked this one… it has a very fun beat",
-          title: "Red Velvet – Chill Kill MV"
+          note: 'Why I picked this one... it has a very fun beat',
+          title: 'Red Velvet – Chill Kill MV'
         },
         {
           url: 'https://www.youtube.com/watch?v=IdneKLhsWOQ',
-          note: "A dreamy track — one of Taylor’s best re-recordings",
-          title: "Taylor Swift – Wildest Dreams (Taylor’s Version)"
+          note: 'A dreamy track — one of Taylor\'s best re-recordings',
+          title: 'Taylor Swift – Wildest Dreams (Taylor\'s Version)'
         }
       ]
     }
@@ -72,3 +73,47 @@ export default {
         const host = u.hostname.replace(/^www\./, '')
         if (host === 'youtu.be') {
           const id = u.pathname.slice(1)
+          return id ? 'https://www.youtube-nocookie.com/embed/' + id : ''
+        }
+        if (host.endsWith('youtube.com')) {
+          const v = u.searchParams.get('v')
+          if (v) return 'https://www.youtube-nocookie.com/embed/' + v
+          if (u.pathname.startsWith('/shorts/')) {
+            const id = u.pathname.split('/')[2] || ''
+            return id ? 'https://www.youtube-nocookie.com/embed/' + id : ''
+          }
+        }
+      } catch (e) {
+        return ''
+      }
+      return ''
+    }
+  }
+}
+</script>
+
+<style scoped>
+.sotd-page {
+  min-height: 100vh;
+  background-color: #d6f5f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.sotd-section {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.sotd-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sotd-card {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.mt-3 { margin-top: 0.75rem; }
+</style>
