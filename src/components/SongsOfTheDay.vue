@@ -1,35 +1,39 @@
 <template>
   <div class="sotd-page">
-    <section class="hero is-light is-fullheight-with-navbar">
-      <div class="hero-body">
-        <div class="container sotd-container">
-          <p class="title has-text-centered">Songs of the Day</p>
+    <section class="section sotd-section">
+      <div class="container sotd-container">
+        <h1 class="title has-text-centered">Songs of the Day</h1>
 
-          <b-card :header="videos[0].title" class="mb-5">
-            <div class="video is-16by9">
-              <iframe
-                :src="embedUrl(videos[0].url)"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <p v-if="videos[0].note" class="mt-3">{{ videos[0].note }}</p>
-          </b-card>
+        <div class="columns is-multiline is-variable is-6 is-centered">
+          <div class="column is-12-mobile is-6-tablet is-5-desktop">
+            <b-card :header="videos[0].title" class="sotd-card">
+              <div class="video is-16by9">
+                <iframe
+                  :src="embedUrl(videos[0].url)"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p v-if="videos[0].note" class="mt-3">{{ videos[0].note }}</p>
+            </b-card>
+          </div>
 
-          <b-card :header="videos[1].title">
-            <div class="video is-16by9">
-              <iframe
-                :src="embedUrl(videos[1].url)"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <p v-if="videos[1].note" class="mt-3">{{ videos[1].note }}</p>
-          </b-card>
+          <div class="column is-12-mobile is-6-tablet is-5-desktop">
+            <b-card :header="videos[1].title" class="sotd-card">
+              <div class="video is-16by9">
+                <iframe
+                  :src="embedUrl(videos[1].url)"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p v-if="videos[1].note" class="mt-3">{{ videos[1].note }}</p>
+            </b-card>
+          </div>
         </div>
       </div>
     </section>
@@ -68,41 +72,3 @@ export default {
         const host = u.hostname.replace(/^www\./, '')
         if (host === 'youtu.be') {
           const id = u.pathname.slice(1)
-          return id ? `https://www.youtube-nocookie.com/embed/${id}` : ''
-        }
-        if (host.endsWith('youtube.com')) {
-          const v = u.searchParams.get('v')
-          if (v) return `https://www.youtube-nocookie.com/embed/${v}`
-          if (u.pathname.startsWith('/shorts/')) {
-            const id = u.pathname.split('/')[2] || ''
-            return id ? `https://www.youtube-nocookie.com/embed/${id}` : ''
-          }
-        }
-      } catch (e) {
-        return ''
-      }
-      return ''
-    }
-  }
-}
-</script>
-
-<style scoped>
-.sotd-page {
-  min-height: 100vh;
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-}
-
-.sotd-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.mt-3 { margin-top: 0.75rem; }
-
-.b-card {
-  border-radius: 10px;
-}
-</style>
