@@ -78,7 +78,9 @@ export default {
             return id ? `https://www.youtube-nocookie.com/embed/${id}` : ''
           }
         }
-      } catch (e) {}
+      } catch (e) {
+        return ''
+      }
       return ''
     }
   }
