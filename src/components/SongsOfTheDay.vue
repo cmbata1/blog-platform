@@ -51,8 +51,8 @@ export default {
   data () {
     return {
       videos: [
-        { url: 'https://www.youtube.com/watch?v=xlyrt5eAtKI, note: "Why I picked this one… it has a very fun beat" },
-        { url: 'https://www.youtube.com/watch?v=1ekZEVeXwek', note: "In my opinion, this is Ariana Grande's best song" }
+        { url: "https://www.youtube.com/watch?v=xlyrt5eAtKI", note: "Why I picked this one… it has a very fun beat" },
+        { url: "https://www.youtube.com/watch?v=1ekZEVeXwek", note: "In my opinion, this is Ariana Grande's best song" }
       ]
     }
   },
