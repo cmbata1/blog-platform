@@ -53,7 +53,7 @@ export default {
           title: 'Red Velvet – Chill Kill MV'
         },
         {
-          url: 'https://youtu.be/vtW_4j7SsZk?si=KQEnZd7kze_iIL3H,
+          url: 'https://youtu.be/vtW_4j7SsZk?si=KQEnZd7kze_iIL3H',
           note: 'A dreamy track — one of Taylor\'s best re-recordings',
           title: 'Taylor Swift – Wildest Dreams (Taylor\'s Version)'
         }
